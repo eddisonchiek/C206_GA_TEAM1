@@ -7,14 +7,14 @@ public class Students {
 	private String address;
 	private String grade;
 	private String class_code;
-	private String teacher;
+	private String class_teacher;
 			
 	private String parentName;
 	private String parentEmail;
 	private int parentContact;	
     
 	public Students(String studentname, String address, 
-			String grade, String class_code, String teacher,
+			String grade, String class_code, String class_teacher,
 			String parentName, String parentEmail, int parentContact) {
 
 		id = "S"+nextId;
@@ -27,7 +27,7 @@ public class Students {
 		this.parentContact = parentContact;
 		this.grade = grade;
 		this.class_code = class_code;
-		this.teacher = teacher;
+		this.class_teacher = class_teacher;
 	}
 
 	public String getId() {
@@ -90,8 +90,8 @@ public class Students {
 		this.class_code = class_code;
 	}
 
-	public String getteacher() {
-		return teacher;
+	public String getClass_teacher() {
+		return class_teacher;
 	}
 
 	public void setClass_teacher(String class_teacher) {
@@ -101,10 +101,12 @@ public class Students {
 	@Override
 	public String toString() {
 		return "Students [id=" + id + ", studentname=" + studentname + ", address=" + address + ", grade=" + grade
-				+ ", class_code=" + class_code + ", class_teacher=" + teacher + ", parentName=" + parentName
+				+ ", class_code=" + class_code + ", class_teacher=" + class_teacher + ", parentName=" + parentName
 				+ ", parentEmail=" + parentEmail + ", parentContact=" + parentContact + "]";
 	}
 	
 	
 	
 }
+
+
